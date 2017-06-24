@@ -9,6 +9,8 @@ honeycomb is focused only on Hive, and it was adapted for compatibility with dpl
 The easiest way to verify that the correct set of dependencies are installed is to use a fixed snapshot of MRAN (Microsoft) snapshot of CRAN.
 Add the following lines to your `Rprofile.site` and `Renviron.site` files. If you have a fresh installation of `R` you will need to create the files.
 
+Adjust the environment variables added to the `Renviron.site` as needed for your distribution of hadoop.
+
 __`$R_HOME/etc/Rprofile.site`__
 ```
 options(repos=structure(c(CRAN='https://mran.revolutionanalytics.com/snapshot/2017-04-01/')))
