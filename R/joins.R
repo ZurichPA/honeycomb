@@ -181,6 +181,6 @@ full_join.tbl_Hive <- function(x, y, by = NULL, copy = FALSE, suffix = c("_x", "
     select_(.dots = setdiff(colnames(.), setdiff(ykey, xkey))) %>%
     mutate_(.dots = setNames(paste0("coalesce(", xkey, ", ", ykey_copy, ")"), xkey)) %>%
     select_(.dots = setdiff(colnames(.), ykey_copy))
-  .after_join(joined_tbl, join_info$by_vars)
+  after_join(joined_tbl, join_info$by_vars)
 }
 
